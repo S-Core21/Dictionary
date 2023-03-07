@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: hanson;
+    src: url(./fonts/Hanson-Bold_28ef9370662e758bd08e61f45c3c69b8.otf);
+}
+@font-face {
+    font-family: Monts BI;
+    src: url(./fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
+}
+@font-face {
+    font-family: Monts I;
+    src: url(./fonts/Montserrat/static/Montserrat-ThinItalic.ttf);
+}
+@font-face {
+    font-family: Monts b;
+    src: url(./fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+.body{
+    width: 1200px;
+    /* border: 1px solid; */
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-top: 5rem;
+    margin: auto;
+    padding-bottom: 5rem;
+    background-color: white;
+    position: relative;
+}
+header h1{
+    font-size: 35px;
+    text-align: center;
+    /* margin-top: 5rem; */
+    margin-bottom: 3rem;
+    font-family: hanson;
+    color: #d1313b;
+    position: relative;
+}
+header h1::before{
+    content: 'GD';
+    position: absolute;
+    left: 0;
+    font-size: 50px;
+    top: -10px;
+    color: #d1313b;
+    animation: rotates 4s linear infinite;
+}
+@keyframes rotates {
+    100%{
+        transform: rotateY(-360deg);
+    }
+}
+h1,p,input{
+    position: relative;
+}
+.input{
+    display: flex;
+    /* flex-direction: column; */
+    width: 90%;
+    margin: auto;
+    gap: 10px;
+    font-size: 20px;
+}
+.input input[type='text']{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px thin gray;
+    font-size: 20px;
+    width: 80%;
+    font-family: Monts b;
+    border: 1px solid #d1313b;
+}
+input[type='submit']{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px thin gray;
+    font-family: Monts b;
+    font-weight: 800;
+    font-size: 20px;
+    background-color: #d1313b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#s_word{
+    font-size: 35px;
+    margin-top: 2rem;
+    text-transform: capitalize;
+    letter-spacing: .1em;
+    font-family: Monts BI;
+    padding: 2rem 0rem;
+    padding-bottom: 1rem;
+}
+/* #s_word::before{
+    content: 'word:-   ';
+    font-size: 25px;
+    font-family: Monts I;
+    font-weight: 800;
+} */
+#pho{
+    font-size: 20px;
+    font-family: Monts I;
+    font-weight: 900;
+}
+/* #pho::before{
+    content: ' phonetics :-   ';
+    font-weight: 600;
+} */
+.pos{
+    margin-top: 2rem;
+    font-size: 20px;
+    font-family: Monts I;
+    font-weight: 900;
+    padding-bottom: 5px;
+}
+.mean{
+    font-size: 25px;
+    font-family: Monts b;
+}
+/* .mean::before{
+    content: 'Meaning :-  ';
+    font-family: Monts I;
+    font-weight: 900;
+} */
+#syn,#ant{
+    font-family: Monts I;
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: 1rem;
+}
+/* #syn::before{
+    content: 'synonyms :-  ';
+    font-family: Monts b;
+    font-weight: 600;
+}
+#ant::before{
+    content: 'Antonyms :-  ';
+    font-family: Monts b;
+    font-weight: 600;
+} */
+
+@media(max-width:460px){
+    .body{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 2rem;
+        width: 100%;
+    }
+    header h1::before{
+        top: 2.5rem;
+        font-size: 30px;
+        left: 45%;
+    }
+    header h1{
+        font-size: 20px;
+        margin-top: 3.5rem;
+        position: initial;
+        margin-bottom: 1.5rem;
+    }
+    .input{
+        margin: 0%;
+        font-size: 20px;
+        width: 100%;
+    }
+    .input input[type='text']{
+        font-size: 12px;
+        padding: 5px;
+        width: 90%;
+    }
+    input[type='submit']{
+        font-size: 14px;
+    }
+    #word{
+        padding: 5px 10px;
+        font-size: 20px;
+    }
+    #s_word{
+        font-size: 20px;
+        margin-top: 0;
+    }
+    #s_word::before{
+        font-size: 20px;
+        font-weight: 800;
+    }
+    #pho{
+        font-size: 16px;
+    }
+    .pos{
+        font-size: 16px;
+        margin-top: 1rem;
+    }
+    .mean{
+        font-size: 18px;
+    }
+    #syn,#ant{
+        font-size: 16px;
+    }
+}
