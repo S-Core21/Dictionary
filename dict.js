@@ -45,13 +45,14 @@ async function getMeaning() {
     
 
     document.getElementById('s_word').textContent ='Word:- ' + word
-    document.getElementById('pho').textContent ='phonetics:- ' + phonics
+    // document.getElementById('pho').textContent ='phonetics:- ' + phonics
     
     console.log(data)
-    if(means.length>1){
-        console.log('greater')
+    if(phonics === undefined){
+        document.getElementById('pho').textContent = ''
+        console.log('none')
     }else {
-        console.log('lesser')
+        document.getElementById('pho').textContent ='phonetics:- ' + phonics
     }
 
     if (data.length >= 3 && means.length>1) {
