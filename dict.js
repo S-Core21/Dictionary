@@ -103,6 +103,8 @@ async function getMeaning() {
 
     const synonyms = data[0].meanings[0].synonyms
     const antonyms = data[0].meanings[0].antonyms
+
+
     if(data.length === 1 || data.length ===2 || data.length >= 3){
         for (i = 0; i < synonyms.length; i++) {
             document.getElementById('syn').textContent += synonyms[i] + ', '
@@ -113,7 +115,7 @@ async function getMeaning() {
             document.getElementById('ant').textContent +=antonyms[i] + ', '
             document.getElementById('antp').style.display = 'block'
         }
-    }else{
+    }else if(synonyms.length<1 || antonyms.length<1){
         document.getElementById('synp').style.display = 'none'
         document.getElementById('antp').style.display = 'none'
     } 
