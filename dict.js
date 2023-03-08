@@ -113,7 +113,10 @@ async function getMeaning() {
             document.getElementById('ant').textContent +=antonyms[i] + ', '
             document.getElementById('antp').style.display = 'block'
         }
-    }
+    }else{
+        document.getElementById('synp').style.display = 'none'
+        document.getElementById('antp').style.display = 'none'
+    } 
     
 }
 
