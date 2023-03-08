@@ -94,21 +94,11 @@ input[type='submit']{
     padding: 2rem 0rem;
     padding-bottom: 1rem;
 }
-/* #s_word::before{
-    content: 'word:-   ';
-    font-size: 25px;
-    font-family: Monts I;
-    font-weight: 800;
-} */
 #pho{
     font-size: 20px;
     font-family: Monts I;
     font-weight: 900;
 }
-/* #pho::before{
-    content: ' phonetics :-   ';
-    font-weight: 600;
-} */
 .pos{
     margin-top: 2rem;
     font-size: 20px;
@@ -120,27 +110,22 @@ input[type='submit']{
     font-size: 25px;
     font-family: Monts b;
 }
-/* .mean::before{
-    content: 'Meaning :-  ';
-    font-family: Monts I;
-    font-weight: 900;
-} */
-#syn,#ant{
+#syn,#ant,small{
     font-family: Monts I;
     font-size: 22px;
     font-weight: 900;
+    /* margin-top: 1rem; */
+}
+small{
+    display: none;
     margin-top: 1rem;
 }
-/* #syn::before{
-    content: 'synonyms :-  ';
-    font-family: Monts b;
-    font-weight: 600;
+.antsyn{
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    gap: 5px;
 }
-#ant::before{
-    content: 'Antonyms :-  ';
-    font-family: Monts b;
-    font-weight: 600;
-} */
 
 @media(max-width:460px){
     .body{
@@ -195,7 +180,11 @@ input[type='submit']{
     .mean{
         font-size: 18px;
     }
-    #syn,#ant{
+    #syn,#ant,small{
         font-size: 16px;
+    }
+    small{
+        padding-top: 1rem;
+        margin-top: 0rem;
     }
 }

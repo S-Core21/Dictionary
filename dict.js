@@ -45,7 +45,6 @@ async function getMeaning() {
     
 
     document.getElementById('s_word').textContent ='Word:- ' + word
-    // document.getElementById('pho').textContent ='phonetics:- ' + phonics
     
     console.log(data)
     if(phonics === undefined){
@@ -106,14 +105,13 @@ async function getMeaning() {
     const antonyms = data[0].meanings[0].antonyms
     if(data.length === 1 || data.length ===2 || data.length >= 3){
         for (i = 0; i < synonyms.length; i++) {
-            document.getElementById('syn').textContent = 'synonyms :- '  + synonyms[i] + ', '
-            // console.log(synonyms[i])
-            
+            document.getElementById('syn').textContent += synonyms[i] + ', '
+            document.getElementById('synp').style.display = 'block'
         }
      
         for (i = 0; i < antonyms.length; i++) {
-            document.getElementById('ant').textContent ='antonyms :- '  + antonyms[i] + ', '
-            // console.log(antonyms[i])
+            document.getElementById('ant').textContent +=antonyms[i] + ', '
+            document.getElementById('antp').style.display = 'block'
         }
     }
     
@@ -127,66 +125,6 @@ console.log(typeof(getMeaning()))
 
 
 
-// const synonyms2 = data[0].meanings[1].synonyms
-//     const antonyms2 = data[0].meanings[1].antonyms
-
-//     for (i = 0; i < synonyms2.length; i++) {
-//         document.getElementById('syn').textContent += synonyms2[i] + ', '  
-//         console.log(synonyms2[i])
-        
-//     }
-//     for (i = 0; i < antonyms2.length; i++) {
-//         document.getElementById('syn').textContent += antonyms2[i] + ', '  
-//         console.log(antonyms2[i])
-        
-//     }
-
-
-    // document.getElementById('s_word').textContent = word
-    // document.getElementById('pho').textContent = phonics
-    // document.getElementById('pos').textContent = partOfSpeech
-    // document.getElementById('meaning').textContent = definition
-    // document.getElementById('pos2').textContent = partOfSpeech2
-    // document.getElementById('meaning2').textContent = definition2
-    // document.getElementById('pos3').textContent = partOfSpeech3
-    // document.getElementById('meaning3').textContent = definition3
-    // for (i = 0; i < synonyms.length; i++) {
-    //     document.getElementById('syn').textContent = synonyms[i]
-    // }
-    // for (i = 0; i < antonyms.length; i++) {
-    //     document.getElementById('ant').textContent = antonyms[i]
-    // }
-
-
-// console.log(data)
-// console.log(data[0].word)
-// console.log(phonics)
-// console.log(data[0].meanings[0].partOfSpeech)
-// console.log(data[0].meanings[0].definitions[0].definition)
-// console.log(data[1].meanings[0].partOfSpeech)
-// console.log(data[1].meanings[0].definitions[0].definition)
-// console.log(data[2].meanings[0].partOfSpeech)
-// console.log(data[2].meanings[0].definitions[0].definition)
-// console.log(data[0].meanings[0].antonyms)
-// console.log(data[0].meanings[0].synonyms)
-
-
-//
-// console.log(word)
-
-// const objCon = {
-//     word: data[0].word,
-//     phonectics: data[0].phonectic,
-//     partOfSpeech: data[0].meanings[0].partOfSpeech,
-//     meaning1: data[0].meanings[0].definitions[0].definition,
-//     partOfSpeech2: data[0].meanings[2].partOfSpeech,
-//     meaning2: data[0].meanings[0].definitions[1].definition,
-//     partOfSpeech3: data[0].meanings[2].partOfSpeech,
-//     meaning3: data[0].meanings[0].definitions[2].definition
-// }
-
-//     example1: data[0].meanings[0].definitions[0].example,
-//     example2: data[0].meanings[1].definitions[0].example,
 
 //https://api.dictionaryapi.dev/api/v2/entries/en/<word>
 
